@@ -3,3 +3,14 @@ Git:
 git status
 git log
 
+
+New system setup:
+Citrix Receiver:
+sudo dpkg -i icaclientWeb_13.2.0.322243_amd64.deb
+sudo ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts/
+sudo c_rehash /opt/Citrix/ICAClient/keystore/cacerts/
+
+ssh:
+ssh-keygen -t rsa -b 4096 -C "dhiyaneshwarancse@gmail.com"
+cat /home/dhiyanesh/.ssh/id_rsa.pub
+git clone git@github.com:dhiyaneshwarancse/linux.git

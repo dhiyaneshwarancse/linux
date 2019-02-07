@@ -1,5 +1,10 @@
 Git:
 ----------------------------------
+git config --global user.email "dhiyaneshwarancse@gmail.com"
+git config --global user.name "dhiyaneshwarancse"
+git add <filename>
+git commit -m "adding ssh"
+git push -uf origin master
 git status
 git log
 

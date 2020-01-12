@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to perfom a global search for the letters "ain" in a string, and display the matches.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var str = "BBBWWW";
+var player = "W";
+var re;
+
+var needCallBack = 0;
+var gameStarted = 0;
+function myFunction() {
+debugger;
+  needCallBack = 0;
+  if(player == "W"){
+      re = /WWW/g;
+      player = "B";
+  }else if(player=="B"){
+   re = /BBB/g;
+    player = "W";
+  }
+    
+while ((match = re.exec(str)) != null) {
+    gameStarted = 1;
+    debugger;
+    var position =  match.index+1;
+    str = str.substring(0,position - 1) + str.substring(position, str.length);
+    needCallBack = 1;
+    break;
+    
+}
+
+
+if(needCallBack == 1){
+myFunction();
+}else if(gameStarted == 1){
+alert("Winner:"+ player);
+}else{
+alert("No one is winner");
+}
+  
+  
+  
+}
+</script>
+
+</body>
+</html>
